@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Simple MC tool for restriking options, static volatility
-initial version: unlimited restrike, obervation frequency = simulation step
+Simple MC tool for whale options, static volatility
+
 """
 import sys
 sys.path.append(r'I:\trial\whale option')
