@@ -2,7 +2,7 @@
 """
 Created on Fri Jul 20 10:35:50 2018
 
-@author: xc36456
+
 """
 import sys
 sys.path.append(r'I:\corridor varswap confirm')
