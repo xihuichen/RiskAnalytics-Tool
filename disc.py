@@ -12,12 +12,12 @@ import datetime
 from datetime import timedelta
 from pandas.tseries.offsets import BDay
 
-df=pd.read_excel("I:\corridor varswap confirm\spxhsci.xls")
+df=pd.read_excel("I:\corridor varswap confirm\spxhsci.xls") #Downloaded historical time series of spx daily closed price and hsce closed price
 df=df.dropna()
-upper=1
-lower=0.6
+upper=1 #The ceiling(upper limit) of varswap from termsheet
+lower=0.6 #The floor(lower limit) of varswap from termsheet
 
-start = df['Date'][0] - BDay(3*261)
+start = df['Date'][0] - BDay(3*261) #Using two years historical data
 start = start.date()
 
 
@@ -47,7 +47,7 @@ for i in range(0,loc):
 #     dftrunc=df.truncate(before=index.values[0]-i,after=index2.values[0]-i)
 #==============================================================================
     condition=dftrunc[(dftrunc['.HSCE, Index Level']<=corridor_up) &(dftrunc['.HSCE, Index Level']>=corridor_down)].count()['.HSCE, Index Level']
-    print(condition)
+    #print(condition)
     temp=float(condition)/dftrunc.count()['.HSCE, Index Level']
     conditiondays.append(condition)
     corridor_disc.append(temp)
