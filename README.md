@@ -1,1 +1,1 @@
-A python tool used to simulate asset prices, then used to price financial derivatives to calculate the potential counterparty risk exposure 
+A simple python tool to show team members how easy it is to utilise python for automating our daily BAU
